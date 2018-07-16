@@ -14,11 +14,17 @@ class TestLootBag(unittest.TestCase):
         lootbag = Lootbag()
         result = lootbag.add_toy_to_bag("rope")
         # will return argument 
-        expected = ("rope")
+        expected = "rope"
         self.assertEqual(result, expected) 
 
+    def test_toy_removed_from_bag(self):
+        lootbag = Lootbag()
+        result = lootbag.remove_toy_from_bag("ball")
+        expected = "ball"
+        self.assertEqual(result, expected)
+
     # def test_toy_assigned_to_child(self):
-    #     self.assertTrue(child, Lootbag)  
+    #     lootbag = Lootbag()  
 
 if __name__ == '__main__':
     unittest.main()          
